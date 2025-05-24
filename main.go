@@ -1,13 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"encoding/json"
+	"fmt"
+)
+
+type JSONObject struct {
+	Name   string   `json:"name"`
+	Age    int      `json:"age"`
+	Skills []string `json:"skills"`
+}
 
 func main() {
-	myText := TextObject{text: "Vamsi Krishna Tupakula"}
-	fmt.Println(myText.toLowerCase())
-	fmt.Println(myText.toUpperCase())
-	myText.printWordCount()
-	myText.printCharacterCount()
-	fmt.Println(myText.getReversedString())
-	fmt.Println(myText.isPalindrome())
+	data := ReadFileContent("sample.json")
+	var jsonData JSONObject
+	json.Unmarshal(data, &jsonData)
+	fmt.Println(jsonData)
 }
