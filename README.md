@@ -1,14 +1,13 @@
 # TODOS
 
--   [ ] Mini utilities
-    -   [ ] text formating (lowercase, uppercase, slicing)
-    -   [ ] counters (word counter, most repeated word, most repeated character)
-    -   [ ] isPalindrome
--   [ ] Random number between 1-100 game
+-   [x] Mini utilities
+    -   [x] text formating (lowercase, uppercase, slicing)
+    -   [x] counters (word counter, most repeated word, most repeated character)
+    -   [x] isPalindrome
 -   [ ] File reader and writer
--   [ ] Reading command line arguments as input
+-   [x] Reading command line arguments as input
 -   [ ] FizzBuzz (multiples of 3 with Fizz and 5 with Buzz by print 1 - 100)
--   [ ] Todo CLI
+-   [x] Todo CLI
 -   [ ] Fetch API and print response
 -   [ ] Simple HTTP server
 -   [ ] URL shortner project
