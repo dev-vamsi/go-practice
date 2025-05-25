@@ -1,19 +1,12 @@
 package main
 
 import (
-	"encoding/json"
-	"fmt"
+	"net/http"
 )
 
-type JSONObject struct {
-	Name   string   `json:"name"`
-	Age    int      `json:"age"`
-	Skills []string `json:"skills"`
-}
-
 func main() {
-	data := ReadFileContent("sample.json")
-	var jsonData JSONObject
-	json.Unmarshal(data, &jsonData)
-	fmt.Println(jsonData)
+	http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("Hello, World!"))
+	})
+	http.ListenAndServe(":8080", nil)
 }
